@@ -1,14 +1,17 @@
 <script setup lang="ts">
-import AppSidebar from './components/AppSidebar.vue';
-import SidebarProvider from './components/ui/sidebar/SidebarProvider.vue';
-import SidebarTrigger from './components/ui/sidebar/SidebarTrigger.vue';
-
-
+useHead({
+  title: 'Try Shadcn On Nuxt JS',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+  bodyAttrs: {
+    class: 'test'
+  },
+  script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+})
 </script>
 
 <template>
-  <SidebarProvider>
-    <AppSidebar />
-    <SidebarTrigger />
-  </SidebarProvider>
+  <NuxtLoadingIndicator color="#3C50E0" :height="5" />
+  <NuxtPage />
 </template>

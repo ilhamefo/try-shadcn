@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
+    'nuxt-lucide-icons',
+    '@pinia/nuxt',
+  ],
+  ssr: false,
   shadcn: {
     /**
      * Prefix for all the imported component
